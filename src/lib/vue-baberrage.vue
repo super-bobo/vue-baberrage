@@ -155,6 +155,10 @@ export default {
     }
   },
   methods: {
+    // 重新计算宽度
+    resetBoxWidth(){
+      this.boxWidthVal = this.$refs.stage.parentNode.offsetWidth
+    },
     // 布置泳道
     // 如果laneseMode为true的话，第一个参数为泳道数量，反之为舞台高度
     setUpLane (newHeightOrNewLanes, lanesMode = false) {
